@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #f1f6fc31;
+}
+
+header{
+    background-image: url('../img/Capa\ do\ site.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.navigation ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.navigation ul li a:not(.btn)::after { 
+    content: "";
+    background-color: #202730;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.navigation ul li a:hover::after {
+    width: 100%;
+}
+
+/* 
+        OU
+
+.navigation ul li a:not(.btn):hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+*/
+
+/* Menu mobile */
+
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+
+nav .close-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+
+.btn {
+    background-color: #232a31;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.btn.animate-btn {
+    animation: animate-outline 1s ease-out infinite;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background-color: #435d7c;
+    font-weight: 600;
+}
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #4f9bf98a;
+    }
+    to {
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+section, 
+footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p{
+    color: #0000009c;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-text {
+    margin: 130px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 96px;
+    color: white;
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: #ffffffb7;
+    font-weight: lighter;
+    margin: 16px 0;
+}
+
+
+/* main*/
+.faca-mais .container {
+    display: flex;
+    align-items: center;
+}
+
+.faca-mais .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.faca-mais .faca-mais-text p {
+    margin: 20px 0 15px 0;
+}
+
+.faca-mais .faca-mais-img {
+    width: 50%;
+}
+
+.faca-mais .faca-mais-img img{
+    width: 100%;
+}
+
+/* clientes*/
+.clientes h3,
+.clientes p{
+    text-align: center;
+}
+.clientes .container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #323a44;
+    text-align: center;
+}
+
+footer i {
+    color: #111316;
+    font-size: 19px;
+    background-color: rgb(255, 254, 254);
+    padding: 10px;
+    align-items: center;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin-top: 20px;
+    color: white;
+}
+
+.local {
+    color: black;
+    background-color: #4f9cf9;
+}
+
+/* --------------------------------------------------------------------------
+            Css da página SOBRE
+-----------------------------------------------------------------------------*/
+
+.sobre .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre .sobre-text{
+    width: 50%;
+    padding-right: 40px;
+}
+
+.sobre .sobre-text p{
+    margin: 18px 0;
+    color: #000000a6;
+}
+
+.sobre .sobre-img {
+    width: 50%;
+}
+
+.sobre .sobre-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ----------------- FIM DO CSS DA PÁGINA SOBRE -------------------------------*/
+
+/* --------------------------------------------------------------------------
+            Css da página SERVICO
+-----------------------------------------------------------------------------*/
+
+.servico h3 {
+    text-align: center;
+}
+
+.servico .container > p {
+    text-align: center;
+}
+
+
+.servico .rows-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.servico .row-card-item {
+    background-color: #d8dce2;
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.servico .row-card-item:hover {
+    background-color: #3e618b;
+}
+
+.servico .row-card-item:hover p {
+    color: white;
+}
+
+.servico .row-card-item img {
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    width: 70px;
+    padding: 9px;
+}
+
+.servico .row-card-item p.nome-servico {
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+.servico .row-card-item p.descricao-servico{
+    transition: 0.3s;
+}
+
+.dados {
+    background-color: #d3e6fd;
+}
+
+.dados .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dados .dados-item {
+    text-align: center;
+    margin: 15px;
+    color: #000000be;
+}
+
+.dados .dados-item img {
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80px;
+}
+
+.dados .dados-item p {
+    font-size: 18px;
+}
+
+.dados .dados-item p strong {
+    font-size: 28px;
+}
+
+/* ----------------- FIM DO CSS DA PÁGINA SERVICO -------------------------------*/
+
+
+/* --------------------------------------------------------------------------
+            Css da página CONTATO
+-----------------------------------------------------------------------------*/
+
+.contato-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.contato-info .left-side {
+    width: 50%;
+    padding: 30px;
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+
+.contato-info .left-side div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contato-info .left-side div i {
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+
+.contato-info .left-side p {
+    font-size: 17px;
+    color: white;
+}
+
+.contato-info .right-side {
+    width: 50%;
+}
+
+.contato-info .right-side input {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+}
+
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus {
+    border-color: #4f9cf9;
+}
+
+.contato-info .right-side textarea {
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+
+.contato-info .right-side button {
+    border: none;
+}
+/* ----------------- FIM DO CSS DA PÁGINA CONTATO -------------------------------*/
+
+@media(max-width: 830px) {
+    /* Menu mobile */
+    .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+        background: #184b88;
+    }
+
+    .ul.open{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    
+    .ul a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+
+    /* Home resposivo*/
+    .faca-mais .faca-mais-text {
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .faca-mais .container {
+        flex-direction: column;
+    }
+
+    .faca-mais .faca-mais-text h3 {
+        font-size: 48px;
+    }
+
+    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-img {
+        width: 100%;
+    }
+
+    /* banner responsivo */ 
+    .banner .banner-text {
+        padding: 0;
+        margin: 80px;
+    }
+
+    .banner .banner-text h1 {
+        font-size: 80px;
+    }
+
+    .banner .banner-text p {
+        font-size: 15px;
+    }
+
+    .comentarios .card-item {
+        width: 100%;
+    }
+
+    /* Sobre responsivo*/
+
+    .sobre .container {
+        flex-direction: column-reverse;
+    }
+
+    .sobre .sobre-img,
+    .sobre .sobre-text {
+        width: 100%;
+    }
+
+    .sobre .sobre-text {
+        margin-top: 40px;
+    }
+
+    /* Contato responsivo */ 
+    .contato .contato-info {
+        flex-direction: column-reverse;
+    }
+
+    .contato-info .right-side,
+    .contato-info .left-side {
+        width: 100%;
+    }
+
+    .contato-info .right-side {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 500px) {
+    .banner .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .faca-mais .faca-mais-text h3 {
+        font-size: 40px;
+    }
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #101026;
+    flex-direction: column;
+ }
+ .text{
+     font-size: 45px;
+     color: #f5f5f5;
+     margin-bottom: 30px;
+ }
+ .paragrafo{
+     color: #f5f5f5;
+     margin-bottom: 50px;
+ }
+ .obg{
+     padding: 15px 55px;
+     background: #f5f5f5;
+     text-decoration: none;
+     color: #101026;
+     font-size: 18px;
+     transition: all 0.5s;
+ }
+ .obg:hover{
+    border-radius: 16px;
+}
